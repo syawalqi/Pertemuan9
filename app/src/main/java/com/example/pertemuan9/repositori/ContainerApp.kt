@@ -13,6 +13,5 @@ class ContainerDataApp(private val context: Context):
 
 class AplikasiSiswa : Application() {
     lateinit var containerApp: ContainerApp
-
 }
 
