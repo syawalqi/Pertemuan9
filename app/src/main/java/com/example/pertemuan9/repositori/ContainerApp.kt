@@ -10,3 +10,9 @@ class ContainerDataApp(private val context: Context):
         OfflineRepositoriSiswa(DatabaseSiswa.getDatabase(context).siswaDao())
     }
 }
+
+class AplikasiSiswa : Application() {
+    lateinit var containerApp: ContainerApp
+
+}
+
