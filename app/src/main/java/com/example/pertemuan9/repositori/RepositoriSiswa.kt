@@ -1,5 +1,7 @@
 package com.example.pertemuan9.repositori
 
+import com.example.pertemuan9.room.SiswaDao
+
 interface RepositoriSiswa {
     fun getAllSiswaStream(): Flow<List<Siswa>>
 
@@ -8,3 +10,7 @@ interface RepositoriSiswa {
 
 class OfflineRepositoriSiswa(private val siswaDao: SiswaDao
 ) : RepositoriSiswa {
+    override fun getAllSiswaStream(): Flow<List<Siswa>> = SiswaDao.getAllSiswa() {
+
+    }
+}
